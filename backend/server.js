@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 // Import routes
-const authRoutes = require('./routes/authRoutes'); // User authentication routes
-const eventRoutes = require('./routes/eventRoutes'); // Event-related routes
+const authRoutes = require('./routes/authroutes'); // User authentication routes
+const eventRoutes = require('./routes/eventroutes'); // Event-related routes
 
 const app = express();
 const PORT = 5000;
@@ -16,8 +16,8 @@ app.use(cors());
 app.use(bodyParser.json()); // To parse JSON data
 
 // Routes
-app.use('/api/auth/users', authRoutes); // Authentication routes
-app.use('/api/events', eventRoutes); // Event management routes (secured by auth and role middleware)
+app.use('/api/auth/users', authroutes); // Authentication routes
+app.use('/api/events', eventroutes); // Event management routes (secured by auth and role middleware)
 
 // MongoDB Connection
 mongoose
