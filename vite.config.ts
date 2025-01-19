@@ -8,6 +8,7 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   server: {
-    port: 3002, // Specify the port you want
+    host: '0.0.0.0', // This makes sure the app binds to all network interfaces
+    port: 3002,       // You can leave this as 3002 or any port Render handles
   },
 });
