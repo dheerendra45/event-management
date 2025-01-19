@@ -11,7 +11,7 @@ export function EventPage() {
     // Fetch events from the backend
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/events'); // Replace with your API endpoint
+        const response = await axios.get('https://event-management-qo7p.onrender.com/api/events'); // Replace with your API endpoint
         const currentDate = new Date();
         const filteredEvents = response.data.filter((event: any) => new Date(event.date) > currentDate); // Filter events greater than current date
         setEvents(filteredEvents);

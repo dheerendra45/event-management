@@ -8,6 +8,6 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   server: {
-    port: 3000, // Specify the port you want
+    port: 3002, // Specify the port you want
   },
 });

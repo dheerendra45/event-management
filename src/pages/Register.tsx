@@ -19,7 +19,7 @@ export function Register() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/users/register', {
+      const response = await fetch('https://event-management-qo7p.onrender.com/api/auth/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

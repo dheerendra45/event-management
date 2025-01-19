@@ -37,7 +37,7 @@ export const AuthProvider: React.FC = ({ children }) => {
   const login = async (email: string, password: string) => {
     try {
       // Call the backend API to authenticate the user
-      const response = await axios.post('http://localhost:5000/api/auth/users/login', {
+      const response = await axios.post('https://event-management-qo7p.onrender.com/api/auth/users/login', {
         email,
         password,
       });

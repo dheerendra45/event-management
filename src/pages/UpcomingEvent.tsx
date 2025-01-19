@@ -7,7 +7,7 @@ export function UpcomingEvent() {
   const { currentUser } = useAuth(); // Get logged-in user info
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  console.log(currentUser)
+
   useEffect(() => {
     if (!currentUser) {
       // Redirect to login page if not logged in
@@ -22,17 +22,6 @@ export function UpcomingEvent() {
     { id: 1, name: 'Event 1', date: '2025-01-20', organizerId: 1 },
     { id: 2, name: 'Event 2', date: '2025-02-15', organizerId: 2 },
   ];
-
-  const joinEvent = async (eventId) => {
-    try {
-      const response = await axios.get(`http://localhost:5000/generate-room/${eventId}`);
-      const { url } = response.data;
-      navigate(url); // Redirect to the video room
-    } catch (error) {
-      console.error('Error generating room:', error);
-      alert('Failed to join the event. Please try again.');
-    }
-  };
 
   const editEvent = (eventId) => {
     navigate(`/edit-event/${eventId}`); // Navigate to the edit event page
@@ -60,7 +49,6 @@ export function UpcomingEvent() {
                 </button>
               )}
               <button
-                onClick={() => joinEvent(event.id)}
                 className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"
               >
                 Join Event
