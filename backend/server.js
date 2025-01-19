@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 // Import routes
-const authRoutes = require('./routes/authroutes'); // User authentication routes
-const eventRoutes = require('./routes/eventroutes'); // Event-related routes
+const authroutes = require('./routes/authroutes'); // User authentication routes
+const eventroutes = require('./routes/eventroutes'); // Event-related routes
 
 const app = express();
 const PORT = 5000;
